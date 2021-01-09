@@ -1,2 +1,2 @@
 # temp2OSC
-small script to read the CPU temp on an raspberry Pi and send it to an instance of companion via OSC
+This script will continously read the CPU Temperature of an RaspberryPi and send it to an instance of Companion by Bitfocus [1]. At the beginning of the file are some variables to configure IP-address and port of the companion instance as well as the page and button on which the temperature should be displayed. At defined thresholds (default 60°C) the background-color will be set to orange and at another treshold (80°C) the background-color will be turned red, otherwise the background will be black(all colors can be configured at the beginning of the script).

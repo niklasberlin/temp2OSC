@@ -41,8 +41,10 @@ if you want to run it in the background use this:
 This step is based on the instructions on how to auto start companion on a Linux system [4]
 
 first we need to create a UNIT-File at /etc/systemd/system/temp2osc.service
-> sudo nano /etc/systemd/system/temp2osc.service
-copy the below code into this file, adjust the path to the script depending on your setup and save the file
+> sudo nano /etc/systemd/system/temp2osc.service  
+
+copy the below code into this file, adjust the path to the script depending on your setup and save the file  
+
 > [Unit]
 > Description=Temp2OSC  
 > After=network-online.target  

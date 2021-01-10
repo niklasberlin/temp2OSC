@@ -44,21 +44,21 @@ first we need to create a UNIT-File at /etc/systemd/system/temp2osc.service
 > sudo nano /etc/systemd/system/temp2osc.service
 copy the below code into this file, adjust the path to the script depending on your setup and save the file
 > [Unit]
-> Description=Temp2OSC
-> After=network-online.target
-> Wants=network-online.target
-> 
-> [Service]
-> Type=simple
-> User=pi
-> WorkingDirectory=/home/pi/scripts
-> ExecStart=python3 /home/pi/scripts/temp2OSC.py
-> Restart=on-failure
-> KillSignal=SIGINT
-> TimeoutStopSec=60
-> 
-> [Install]
-> WantedBy=multi-user.target
+> Description=Temp2OSC  
+> After=network-online.target  
+> Wants=network-online.target  
+>   
+> [Service]  
+> Type=simple  
+> User=pi  
+> WorkingDirectory=/home/pi/scripts  
+> ExecStart=python3 /home/pi/scripts/temp2OSC.py  
+> Restart=on-failure  
+> KillSignal=SIGINT  
+> TimeoutStopSec=60  
+>   
+> [Install]  
+> WantedBy=multi-user.target  
 
 now we need to enable this service with the following command
 > sudo systemctl enable temp2osc.service
